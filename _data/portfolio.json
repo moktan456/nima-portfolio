@@ -1,0 +1,180 @@
+{
+  "personal": {
+    "greeting": "Hi, my name is",
+    "name": "Nima Dorji Moktan",
+    "roles": [
+      "Computer Network & Systems Engineer",
+      "Cybersecurity Professional",
+      "IT Support Specialist",
+      "ICT Educator & Lecturer"
+    ],
+    "tagline": "I build secure, reliable IT systems and empower people through technology.",
+    "summary": "Highly accomplished Computer Network & Systems Engineer with a proven track record of optimizing network performance, ICT Support, and supporting enterprise IT systems, networks, and users across education and business environments. Skilled in Microsoft-based environments, network monitoring, system administration, and IT service management. Holds a degree in Computer Science & Cybersecurity and boasts superior technological acumen. Demonstrates a professional demeanour, exceptional analytical capabilities, and a knack for excelling in collaborative team settings.",
+    "email": "moktannima2015@gmail.com",
+    "phone": "0468 944 247",
+    "location": "Perth, WA, Australia",
+    "linkedin": "https://linkedin.com/in/nima-moktan-22916a1bb",
+    "github": "",
+    "resumeFile": "Nima_Moktan_Computer_Network_&_System_Engineers_Resume.pdf"
+  },
+  "skills": {
+    "Networking": [
+      "Network Monitoring",
+      "Wireshark",
+      "Nmap",
+      "Windows Server",
+      "TCP/IP",
+      "Network Infrastructure",
+      "LAN/WAN"
+    ],
+    "Cybersecurity": [
+      "Vulnerability Scanning",
+      "Incident Management",
+      "Cybersecurity",
+      "Penetration Testing",
+      "Security Hardening",
+      "Compliance"
+    ],
+    "Systems & IT": [
+      "System Administration",
+      "Active Directory",
+      "Microsoft 365",
+      "ITSM",
+      "Hardware Deployment",
+      "Patch Management",
+      "IT Support"
+    ],
+    "Teaching & Leadership": [
+      "ICT Curriculum Development",
+      "Lab Design",
+      "Technical Training",
+      "Stakeholder Communication",
+      "Documentation"
+    ]
+  },
+  "experience": [
+    {
+      "title": "IT Support Officer",
+      "company": "Australian Data & Cyber Institute",
+      "period": "Mar 2026 – Present",
+      "overview": "Provide end-to-end IT support and manage institutional systems, infrastructure, and student-facing platforms in a fast-paced education environment.",
+      "responsibilities": [
+        "Provide technical support for desktop systems, software, and network infrastructure",
+        "Manage IT systems including LMS platforms, student systems (MESHED), and internal applications",
+        "Monitor system performance, ensure uptime, and maintain network reliability",
+        "Maintain IT policies, procedures, backups, and data security practices",
+        "Coordinate with vendors and enforce service level agreements (SLAs)",
+        "Support student services including enrolment systems, records management, and front-line support"
+      ],
+      "achievements": [
+        "Improved system reliability and user experience through proactive monitoring and troubleshooting",
+        "Streamlined student support processes, improving response times and service efficiency",
+        "Strengthened data security and backup processes ensuring compliance and system integrity"
+      ]
+    },
+    {
+      "title": "Lecturer – Cybersecurity & ICT",
+      "company": "Australian Data & Cyber Institute",
+      "period": "Feb 2026 – Present",
+      "overview": "Deliver practical cybersecurity and IT infrastructure training aligned with industry standards.",
+      "responsibilities": [
+        "Design and deliver hands-on labs covering network security, system administration and vulnerability assessment",
+        "Support students in troubleshooting system, network, and security issues",
+        "Develop technical learning resources and practical exercises"
+      ],
+      "achievements": [
+        "Improved student practical competency in IT support and cybersecurity tools",
+        "Developed real-world lab environments simulating enterprise systems"
+      ]
+    },
+    {
+      "title": "Sessional Tutor – Cyber Security & ICT",
+      "company": "Curtin University",
+      "period": "Feb 2025 – Present",
+      "overview": "Provide academic and technical support in cybersecurity and networking units.",
+      "responsibilities": [
+        "Assist students with system configuration, networking and cybersecurity tools",
+        "Support lab environments and troubleshoot technical issues",
+        "Explain complex IT concepts to diverse learners"
+      ],
+      "achievements": [
+        "Improved student performance and understanding of technical systems",
+        "Enhanced engagement through practical and structured teaching approaches"
+      ]
+    },
+    {
+      "title": "ICT Support & Systems Intern",
+      "company": "Waterex Pty Ltd",
+      "period": "Jun 2024 – Sep 2024",
+      "overview": "Supported enterprise IT systems, infrastructure, and operational environments.",
+      "responsibilities": [
+        "Monitor system performance and conduct health checks on servers and networks",
+        "Perform vulnerability scans and network analysis using Wireshark and Nmap",
+        "Assist with patch management, updates, and system maintenance",
+        "Troubleshoot hardware, software and network issues"
+      ],
+      "achievements": [
+        "Identified network vulnerabilities and supported remediation actions",
+        "Improved system reliability through proactive monitoring and maintenance"
+      ]
+    },
+    {
+      "title": "Web Master & IT Support Coordinator",
+      "company": "BMS Global",
+      "period": "Jul 2023 – Present",
+      "overview": "Maintain IT infrastructure and provide technical support to internal users.",
+      "responsibilities": [
+        "Monitor and maintain IT systems, servers and web infrastructure",
+        "Provide technical support for hardware, software and network issues",
+        "Implement system monitoring and performance tracking tools",
+        "Deliver cybersecurity awareness and user training"
+      ],
+      "achievements": [
+        "Improved system uptime and performance through proactive maintenance",
+        "Reduced user-related security risks through awareness training"
+      ]
+    },
+    {
+      "title": "ICT Teacher / Educational Technologist",
+      "company": "Ministry of Education, Bhutan",
+      "period": "Jan 2014 – Jun 2023",
+      "overview": "Delivered ICT education and supported technical infrastructure across schools.",
+      "responsibilities": [
+        "Maintain ICT systems, networks and devices across multiple environments",
+        "Provide technical support to staff and students",
+        "Deliver training on cybersecurity, networking and digital systems",
+        "Contribute to ICT curriculum development"
+      ],
+      "achievements": [
+        "Co-authored national ICT curriculum framework integrating cybersecurity",
+        "Improved digital literacy and system usage across institutions"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computing (Cybersecurity)",
+      "institution": "Curtin University",
+      "location": "Perth, WA",
+      "year": "2025"
+    },
+    {
+      "degree": "Master of Computer Science (Data Science)",
+      "institution": "South Asian University",
+      "location": "India",
+      "year": "2019"
+    },
+    {
+      "degree": "Postgraduate Diploma in Education (ICT)",
+      "institution": "Royal University of Bhutan",
+      "location": "Bhutan",
+      "year": "2013"
+    },
+    {
+      "degree": "Bachelor of Computer Science",
+      "institution": "Royal University of Bhutan",
+      "location": "Bhutan",
+      "year": "2012"
+    }
+  ]
+}

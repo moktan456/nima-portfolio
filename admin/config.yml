@@ -1,0 +1,94 @@
+# ─── Decap CMS Configuration ──────────────────────────────────────────────────
+# This file defines the admin editing interface.
+# After deploying to Netlify:
+#   1. Enable Netlify Identity (Site Settings > Identity > Enable)
+#   2. Enable Git Gateway (Identity > Services > Git Gateway > Enable)
+#   3. Invite yourself as a user (Identity > Invite Users)
+#   4. Visit yoursite.netlify.app/admin to log in and edit!
+# ──────────────────────────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway
+  branch: main          # change to "master" if that's your default branch
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# ─── Collections ──────────────────────────────────────────────────────────────
+collections:
+
+  # ─── Portfolio Main Data ────────────────────────────────────────────────────
+  - name: "portfolio"
+    label: "Portfolio"
+    files:
+
+      # ─── Personal Info ─────────────────────────────────────────────────────
+      - label: "Personal Info"
+        name: "personal"
+        file: "_data/portfolio.json"
+        fields:
+          - label: "Personal Details"
+            name: "personal"
+            widget: "object"
+            fields:
+              - { label: "Greeting Text",   name: "greeting",    widget: "string",   default: "Hi, my name is" }
+              - { label: "Full Name",        name: "name",        widget: "string" }
+              - label: "Roles (Typing animation)"
+                name: "roles"
+                widget: "list"
+                field: { label: "Role", name: "role", widget: "string" }
+              - { label: "Tagline",          name: "tagline",     widget: "string" }
+              - { label: "About Summary",    name: "summary",     widget: "text" }
+              - { label: "Email",            name: "email",       widget: "string" }
+              - { label: "Phone",            name: "phone",       widget: "string" }
+              - { label: "Location",         name: "location",    widget: "string" }
+              - { label: "LinkedIn URL",     name: "linkedin",    widget: "string" }
+              - { label: "GitHub URL",       name: "github",      widget: "string",  required: false }
+              - { label: "Resume Filename",  name: "resumeFile",  widget: "string",  hint: "Filename of your CV in the root folder, e.g. My_Resume.pdf" }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "object"
+            fields:
+              - label: "Networking"
+                name: "Networking"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - label: "Cybersecurity"
+                name: "Cybersecurity"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - label: "Systems & IT"
+                name: "Systems & IT"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - label: "Teaching & Leadership"
+                name: "Teaching & Leadership"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Job Title",    name: "title",    widget: "string" }
+              - { label: "Company",      name: "company",  widget: "string" }
+              - { label: "Period",       name: "period",   widget: "string",  hint: "e.g. Jan 2024 – Present" }
+              - { label: "Overview",     name: "overview", widget: "text" }
+              - label: "Key Responsibilities"
+                name: "responsibilities"
+                widget: "list"
+                field: { label: "Responsibility", name: "item", widget: "string" }
+              - label: "Achievements"
+                name: "achievements"
+                widget: "list"
+                field: { label: "Achievement", name: "item", widget: "string" }
+
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Degree / Qualification", name: "degree",      widget: "string" }
+              - { label: "Institution",            name: "institution", widget: "string" }
+              - { label: "Location",               name: "location",    widget: "string" }
+              - { label: "Year",                   name: "year",        widget: "string" }

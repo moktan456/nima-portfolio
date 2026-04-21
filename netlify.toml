@@ -1,0 +1,25 @@
+# ─── Netlify Configuration ────────────────────────────────────────────────────
+
+[build]
+  publish = "."        # serve from root (no build step needed)
+
+# ─── Headers ──────────────────────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options       = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy       = "strict-origin-when-cross-origin"
+
+# ─── Redirects ────────────────────────────────────────────────────────────────
+# Ensure /admin always loads the CMS
+[[redirects]]
+  from   = "/admin"
+  to     = "/admin/index.html"
+  status = 200
+
+# Route all 404s to index (useful for future SPA routing)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
