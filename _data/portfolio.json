@@ -1,22 +1,22 @@
 {
   "personal": {
-    "greeting": "Hi, my name is",
+    "github": "",
+    "summary": "Highly accomplished Computer Network & Systems Engineer with a proven track record of optimizing network performance, ICT Support, and supporting enterprise IT systems, networks, and users across education and business environments. Skilled in Microsoft-based environments, network monitoring, system administration, and IT service management. Holds a degree in Computer Science & Cybersecurity and boasts superior technological acumen. Demonstrates a professional demeanour, exceptional analytical capabilities, and a knack for excelling in collaborative team settings.",
+    "resumeFile": "Nima_Moktan_Computer_Network_&_System_Engineers_Resume.pdf",
     "name": "Nima Dorji Moktan",
+    "phone": "0468 944 247",
+    "tagline": "I build secure, reliable IT systems and empower people through technology.",
+    "profileImage": "/assets/images/nima.png",
+    "location": "Perth, WA, Australia",
+    "greeting": "Hi, my name is",
+    "email": "moktannima2015@gmail.com",
     "roles": [
       "Computer Network & Systems Engineer",
       "Cybersecurity Professional",
       "IT Support Specialist",
       "ICT Educator & Lecturer"
     ],
-    "tagline": "I build secure, reliable IT systems and empower people through technology.",
-    "summary": "Highly accomplished Computer Network & Systems Engineer with a proven track record of optimizing network performance, ICT Support, and supporting enterprise IT systems, networks, and users across education and business environments. Skilled in Microsoft-based environments, network monitoring, system administration, and IT service management. Holds a degree in Computer Science & Cybersecurity and boasts superior technological acumen. Demonstrates a professional demeanour, exceptional analytical capabilities, and a knack for excelling in collaborative team settings.",
-    "email": "moktannima2015@gmail.com",
-    "phone": "0468 944 247",
-    "location": "Perth, WA, Australia",
-    "linkedin": "https://linkedin.com/in/nima-moktan-22916a1bb",
-    "github": "",
-    "resumeFile": "Nima_Moktan_Computer_Network_&_System_Engineers_Resume.pdf",
-    "profileImage": ""
+    "linkedin": "https://linkedin.com/in/nima-moktan-22916a1bb"
   },
   "skills": {
     "Networking": [
