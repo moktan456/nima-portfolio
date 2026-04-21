@@ -87,7 +87,7 @@ function renderAbout(p) {
   if (avatar && p.profileImage) {
     avatar.innerHTML = `
       <img src="${escHtml(p.profileImage)}" alt="${escHtml(p.name)}"
-           class="w-full h-full object-cover rounded-2xl aspect-[3/4]"
+           class="w-full h-full object-cover rounded-2xl aspect-square"
            style="min-height:100%; object-position: center top;" />
     `;
   }
