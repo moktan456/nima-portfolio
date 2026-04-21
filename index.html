@@ -328,17 +328,19 @@
           <!-- Profile placeholder with initials -->
           <div class="w-full aspect-square max-w-xs mx-auto rounded-2xl bg-navy-l border border-navy-ll
                       flex flex-col items-center justify-center gap-4
-                      group-hover:border-mint transition-colors duration-300">
-            <div class="w-28 h-28 rounded-full bg-mint text-navy flex items-center justify-center
-                        text-4xl font-bold font-mono">
-              NM
+                      group-hover:border-mint transition-colors duration-300 overflow-hidden">
+            <!-- Profile avatar: replaced with photo by app.js if profileImage is set -->
+            <div id="profile-avatar" class="w-full h-full flex flex-col items-center justify-center gap-4">
+              <div class="w-28 h-28 rounded-full bg-mint text-navy flex items-center justify-center
+                          text-4xl font-bold font-mono">
+                NM
+              </div>
+              <div class="text-center px-6">
+                <p class="text-white font-semibold text-lg" id="profile-name"></p>
+                <p class="text-slate text-sm mt-1">Computer Network & Systems Engineer</p>
+                <p class="text-mint text-xs font-mono mt-2">Perth, WA 🇦🇺</p>
+              </div>
             </div>
-            <div class="text-center px-6">
-              <p class="text-white font-semibold text-lg" id="profile-name"></p>
-              <p class="text-slate text-sm mt-1">Computer Network & Systems Engineer</p>
-              <p class="text-mint text-xs font-mono mt-2">Perth, WA 🇦🇺</p>
-            </div>
-            <!-- Replace this div with an <img> tag once you have a profile photo -->
           </div>
           <!-- Accent border offset -->
           <div class="absolute -bottom-3 -right-3 w-full aspect-square max-w-xs mx-auto

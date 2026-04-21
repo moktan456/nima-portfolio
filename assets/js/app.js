@@ -82,6 +82,15 @@ function renderAbout(p) {
   setText('about-summary',  p.summary || '');
   setText('profile-name',   p.name    || '');
 
+  // Profile image — show photo if uploaded, otherwise show initials
+  const avatar = document.getElementById('profile-avatar');
+  if (avatar && p.profileImage) {
+    avatar.innerHTML = `
+      <img src="${escHtml(p.profileImage)}" alt="${escHtml(p.name)}"
+           class="w-full h-full object-cover rounded-2xl" />
+    `;
+  }
+
   // Contact mini-list
   const list = document.getElementById('about-contact-list');
   if (!list) return;
