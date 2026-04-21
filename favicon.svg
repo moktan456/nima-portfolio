@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#0a192f"/>
+  <!-- Border accent -->
+  <rect width="64" height="64" rx="12" fill="none" stroke="#64ffda" stroke-width="2.5" opacity="0.6"/>
+  <!-- ND text -->
+  <text
+    x="32"
+    y="44"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="28"
+    font-weight="700"
+    fill="#64ffda"
+    text-anchor="middle"
+    letter-spacing="-1"
+  >ND</text>
+</svg>
