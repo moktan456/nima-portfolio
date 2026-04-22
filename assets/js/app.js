@@ -308,19 +308,37 @@ function highlightActiveNav() {
   const sections = ['about','skills','experience','education','contact'];
   const scrollY  = window.scrollY + 120;
 
+  // Desktop nav highlight
   sections.forEach(id => {
     const section = document.getElementById(id);
-    const link    = document.querySelector(`a[href="#${id}"]`);
+    const link    = document.querySelector(`nav#navbar a[href="#${id}"]`);
     if (!section || !link) return;
-
     const top    = section.offsetTop;
     const bottom = top + section.offsetHeight;
+    link.classList.toggle('nav-active', scrollY >= top && scrollY < bottom);
+  });
 
-    if (scrollY >= top && scrollY < bottom) {
-      link.classList.add('nav-active');
-    } else {
-      link.classList.remove('nav-active');
-    }
+  // Mobile bottom nav highlight
+  const mobileMap = {
+    'hero':       'mob-home',
+    'about':      'mob-about',
+    'experience': 'mob-exp',
+    'education':  'mob-edu',
+    'contact':    'mob-contact',
+  };
+
+  const allSections = ['hero','about','experience','education','contact'];
+  let activeId = 'hero';
+
+  allSections.forEach(id => {
+    const section = document.getElementById(id);
+    if (!section) return;
+    if (scrollY >= section.offsetTop) activeId = id;
+  });
+
+  Object.entries(mobileMap).forEach(([sectionId, navId]) => {
+    const el = document.getElementById(navId);
+    if (el) el.classList.toggle('active', sectionId === activeId);
   });
 }
 

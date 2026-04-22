@@ -149,8 +149,17 @@
     /* ─── Active nav ─────────────────────────────────────── */
     .nav-active { color: #64ffda !important; }
 
-    /* ─── Mobile menu ────────────────────────────────────── */
-    #mobile-menu { transition: all 0.3s ease; }
+    /* ─── Mobile bottom nav ─────────────────────────────── */
+    .mob-nav-item {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 0.5rem 1rem;
+      border-radius: 12px; color: #8892b0;
+      transition: all 0.2s ease; text-decoration: none;
+    }
+    .mob-nav-item.active {
+      background: #64ffda; color: #0a192f;
+    }
+    .mob-nav-item i { font-size: 1.2rem; }
 
     /* ─── Loader ─────────────────────────────────────────── */
     #loader {
@@ -215,22 +224,9 @@
         </li>
       </ul>
 
-      <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden text-mint text-2xl focus:outline-none" aria-label="Toggle menu">
-        <i id="ham-icon" class="fas fa-bars"></i>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-navy-l border-t border-navy-ll px-6 py-6">
-      <ul class="flex flex-col gap-5 text-sm font-mono">
-        <li><a href="#about"      class="text-slate-l hover:text-mint transition-colors" onclick="closeMobileMenu()">About</a></li>
-        <li><a href="#skills"     class="text-slate-l hover:text-mint transition-colors" onclick="closeMobileMenu()">Skills</a></li>
-        <li><a href="#experience" class="text-slate-l hover:text-mint transition-colors" onclick="closeMobileMenu()">Experience</a></li>
-        <li><a href="#education"  class="text-slate-l hover:text-mint transition-colors" onclick="closeMobileMenu()">Education</a></li>
-        <li><a href="#contact"    class="text-slate-l hover:text-mint transition-colors" onclick="closeMobileMenu()">Contact</a></li>
-        <li><a id="mobile-resume-btn" href="#" class="btn-primary inline-block text-center" target="_blank" rel="noopener">Resume</a></li>
-      </ul>
+      <!-- Resume button visible on mobile top nav -->
+      <a id="mobile-resume-btn" href="#"
+         class="md:hidden btn-primary text-xs py-2 px-4" target="_blank" rel="noopener">Resume</a>
     </div>
   </nav>
 
@@ -557,6 +553,30 @@
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════════════
+       MOBILE BOTTOM NAV (hidden on md+)
+  ═══════════════════════════════════════════════════ -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 px-4 pb-3 pt-1">
+    <div class="bg-navy-l border border-navy-ll rounded-2xl flex items-center justify-around shadow-2xl px-1 py-2"
+         style="backdrop-filter: blur(10px);">
+      <a href="#hero"       class="mob-nav-item active" id="mob-home">
+        <i class="fas fa-house"></i>
+      </a>
+      <a href="#about"      class="mob-nav-item" id="mob-about">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="#experience" class="mob-nav-item" id="mob-exp">
+        <i class="fas fa-briefcase"></i>
+      </a>
+      <a href="#education"  class="mob-nav-item" id="mob-edu">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="#contact"    class="mob-nav-item" id="mob-contact">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </nav>
+
   <!-- ─── Back to top button ─── -->
   <button id="back-to-top"
           onclick="window.scrollTo({top:0,behavior:'smooth'})"
@@ -568,6 +588,12 @@
   </button>
 
   <!-- ─── Scripts ─── -->
+  <!-- Add bottom padding on mobile so content clears the bottom nav -->
+  <style>
+    @media (max-width: 767px) {
+      footer { padding-bottom: 6rem !important; }
+    }
+  </style>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/app.js"></script>
 
