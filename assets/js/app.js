@@ -85,10 +85,11 @@ function renderAbout(p) {
   // Profile image — show photo if uploaded, otherwise keep initials fallback
   const avatar = document.getElementById('profile-avatar');
   if (avatar && p.profileImage) {
+    // Remove flex/padding so the image can fill the card edge-to-edge
+    avatar.style.cssText = 'padding:0; gap:0; display:block;';
     avatar.innerHTML = `
       <img src="${escHtml(p.profileImage)}" alt="${escHtml(p.name)}"
-           class="w-full h-full object-cover rounded-2xl aspect-square"
-           style="min-height:100%; object-position: center top;" />
+           style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
     `;
   }
 
