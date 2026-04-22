@@ -309,40 +309,45 @@
     <div class="grid md:grid-cols-5 gap-10 items-start">
 
       <!-- ── RIGHT COL: Photo + Contact (first on mobile, right on desktop) ── -->
-      <div class="md:col-span-2 order-1 md:order-2 flex flex-col items-center md:items-start"
+      <div class="md:col-span-2 order-1 md:order-2"
            data-aos="fade-left" data-aos-delay="200">
 
-        <!-- MOBILE: arch-shaped photo (hidden on md+) -->
-        <div class="md:hidden arch-border w-52 mx-auto mb-6">
-          <div id="profile-avatar-mobile" class="arch-inner">
-            <div class="w-20 h-20 rounded-full bg-mint text-navy flex items-center justify-center
-                        text-3xl font-bold font-mono flex-shrink-0">NM</div>
-            <p class="text-white font-semibold text-base leading-snug" id="profile-name-mobile"></p>
-            <p class="text-slate-l text-xs">Network & Systems Engineer</p>
-            <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
-          </div>
-        </div>
+        <!-- Centering wrapper — card and contact always in same column, same width -->
+        <div class="flex flex-col items-center">
 
-        <!-- DESKTOP: stacked card (hidden on mobile) -->
-        <div class="hidden md:block relative w-56 mx-auto">
-          <div class="absolute inset-0 rounded-2xl rotate-6 translate-x-3 translate-y-3"
-               style="background:rgba(30,60,120,0.5); border:1px solid rgba(79,131,204,0.35);"></div>
-          <div class="relative rounded-2xl p-0.5 hover:scale-[1.02] transition-transform duration-300"
-               style="background: linear-gradient(135deg,#4f83cc 0%,#64ffda 100%);">
-            <div id="profile-avatar"
-                 class="rounded-2xl overflow-hidden bg-navy-l aspect-square
-                        flex flex-col items-center justify-center gap-3 px-6 text-center">
-              <div class="w-24 h-24 rounded-full bg-mint text-navy flex items-center justify-center
-                          text-4xl font-bold font-mono flex-shrink-0">NM</div>
-              <p id="profile-name" class="text-white font-semibold text-lg leading-snug"></p>
-              <p class="text-slate-l text-sm">Computer Network & Systems Engineer</p>
+          <!-- MOBILE: arch-shaped photo (hidden on md+) -->
+          <div class="md:hidden arch-border w-52 mb-6">
+            <div id="profile-avatar-mobile" class="arch-inner">
+              <div class="w-20 h-20 rounded-full bg-mint text-navy flex items-center justify-center
+                          text-3xl font-bold font-mono flex-shrink-0">NM</div>
+              <p class="text-white font-semibold text-base leading-snug" id="profile-name-mobile"></p>
+              <p class="text-slate-l text-xs">Network & Systems Engineer</p>
               <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
             </div>
           </div>
-        </div>
 
-        <!-- Contact list — sits directly below photo on both screen sizes -->
-        <div class="mt-8 space-y-3 w-full max-w-xs mx-auto md:mx-0" id="about-contact-list"></div>
+          <!-- DESKTOP: stacked card (hidden on mobile) -->
+          <div class="hidden md:block relative w-56">
+            <div class="absolute inset-0 rounded-2xl rotate-6 translate-x-3 translate-y-3"
+                 style="background:rgba(30,60,120,0.5); border:1px solid rgba(79,131,204,0.35);"></div>
+            <div class="relative rounded-2xl p-0.5 hover:scale-[1.02] transition-transform duration-300"
+                 style="background: linear-gradient(135deg,#4f83cc 0%,#64ffda 100%);">
+              <div id="profile-avatar"
+                   class="rounded-2xl overflow-hidden bg-navy-l aspect-square
+                          flex flex-col items-center justify-center gap-3 px-6 text-center">
+                <div class="w-24 h-24 rounded-full bg-mint text-navy flex items-center justify-center
+                            text-4xl font-bold font-mono flex-shrink-0">NM</div>
+                <p id="profile-name" class="text-white font-semibold text-lg leading-snug"></p>
+                <p class="text-slate-l text-sm">Computer Network & Systems Engineer</p>
+                <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact list — same width as card, perfectly aligned below -->
+          <div class="mt-8 space-y-3 w-52 md:w-56" id="about-contact-list"></div>
+
+        </div><!-- end centering wrapper -->
       </div>
 
       <!-- ── LEFT COL: Text + Stats (second on mobile, left on desktop) ── -->
