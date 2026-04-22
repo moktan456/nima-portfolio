@@ -79,19 +79,26 @@ function renderHero(p) {
 // ABOUT
 // ─────────────────────────────────────────────────────────────────────────────
 function renderAbout(p) {
-  setText('about-summary',  p.summary || '');
-  setText('profile-name',   p.name    || '');
+  setText('about-summary',     p.summary || '');
+  setText('profile-name',      p.name    || '');
+  setText('profile-name-mobile', p.name  || '');
 
-  // Profile image — show photo if uploaded, otherwise keep initials fallback
-  const avatar = document.getElementById('profile-avatar');
-  if (avatar && p.profileImage) {
-    // Remove flex/padding so the image can fill the card edge-to-edge
-    avatar.style.cssText = 'padding:0; gap:0; display:block;';
-    avatar.innerHTML = `
-      <img src="${escHtml(p.profileImage)}" alt="${escHtml(p.name)}"
-           style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
-    `;
-  }
+  // Fill both desktop and mobile avatars with the photo (if uploaded)
+  const avatars = [
+    document.getElementById('profile-avatar'),
+    document.getElementById('profile-avatar-mobile'),
+  ];
+
+  avatars.forEach(avatar => {
+    if (!avatar) return;
+    if (p.profileImage) {
+      avatar.style.cssText = 'padding:0; gap:0; display:block;';
+      avatar.innerHTML = `
+        <img src="${escHtml(p.profileImage)}" alt="${escHtml(p.name)}"
+             style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;" />
+      `;
+    }
+  });
 
   // Contact mini-list
   const list = document.getElementById('about-contact-list');

@@ -80,6 +80,23 @@
     }
     .nav-link:hover::after { transform: scaleX(1); }
 
+    /* ─── Mobile arch photo ─────────────────────────────── */
+    .arch-border {
+      border-radius: 50% 50% 20px 20px / 35% 35% 20px 20px;
+      background: linear-gradient(135deg, #4f83cc 0%, #64ffda 100%);
+      padding: 3px;
+      display: block;
+    }
+    .arch-inner {
+      border-radius: 50% 50% 16px 16px / 33% 33% 16px 16px;
+      overflow: hidden;
+      background: #112240;
+      aspect-ratio: 3/4;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.75rem; text-align: center; padding: 1.5rem;
+    }
+
     /* ─── Skill tag ─────────────────────────────────────── */
     .skill-tag {
       background: #112240; color: #64ffda;
@@ -293,17 +310,53 @@
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-5 gap-12 items-start">
-      <!-- Text -->
-      <div class="md:col-span-3 space-y-4" data-aos="fade-right" data-aos-delay="100">
+    <div class="grid md:grid-cols-5 gap-10 items-start">
+
+      <!-- ── RIGHT COL: Photo + Contact (first on mobile, right on desktop) ── -->
+      <div class="md:col-span-2 order-1 md:order-2 flex flex-col items-center md:items-start"
+           data-aos="fade-left" data-aos-delay="200">
+
+        <!-- MOBILE: arch-shaped photo (hidden on md+) -->
+        <div class="md:hidden arch-border w-52 mx-auto mb-6">
+          <div id="profile-avatar-mobile" class="arch-inner">
+            <div class="w-20 h-20 rounded-full bg-mint text-navy flex items-center justify-center
+                        text-3xl font-bold font-mono flex-shrink-0">NM</div>
+            <p class="text-white font-semibold text-base leading-snug" id="profile-name-mobile"></p>
+            <p class="text-slate-l text-xs">Network & Systems Engineer</p>
+            <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
+          </div>
+        </div>
+
+        <!-- DESKTOP: stacked card (hidden on mobile) -->
+        <div class="hidden md:block relative w-56 mx-auto">
+          <div class="absolute inset-0 rounded-2xl rotate-6 translate-x-3 translate-y-3"
+               style="background:rgba(30,60,120,0.5); border:1px solid rgba(79,131,204,0.35);"></div>
+          <div class="relative rounded-2xl p-0.5 hover:scale-[1.02] transition-transform duration-300"
+               style="background: linear-gradient(135deg,#4f83cc 0%,#64ffda 100%);">
+            <div id="profile-avatar"
+                 class="rounded-2xl overflow-hidden bg-navy-l aspect-square
+                        flex flex-col items-center justify-center gap-3 px-6 text-center">
+              <div class="w-24 h-24 rounded-full bg-mint text-navy flex items-center justify-center
+                          text-4xl font-bold font-mono flex-shrink-0">NM</div>
+              <p id="profile-name" class="text-white font-semibold text-lg leading-snug"></p>
+              <p class="text-slate-l text-sm">Computer Network & Systems Engineer</p>
+              <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact list — sits directly below photo on both screen sizes -->
+        <div class="mt-8 space-y-3 w-full max-w-xs mx-auto md:mx-0" id="about-contact-list"></div>
+      </div>
+
+      <!-- ── LEFT COL: Text + Stats (second on mobile, left on desktop) ── -->
+      <div class="md:col-span-3 space-y-4 order-2 md:order-1" data-aos="fade-right" data-aos-delay="100">
         <p id="about-summary" class="text-slate leading-relaxed text-base"></p>
         <p class="text-slate leading-relaxed text-base">
           Currently based in <span class="text-mint font-medium">Perth, WA</span>, I bring over a decade of
           experience spanning network engineering, cybersecurity, system administration, and IT education —
           delivering reliable, secure solutions aligned with real business needs.
         </p>
-
-        <!-- Quick facts -->
         <div class="grid grid-cols-2 gap-4 mt-6">
           <div class="bg-navy-l rounded-lg p-4 border border-navy-ll card-hover">
             <div class="text-3xl font-bold gradient-text">10+</div>
@@ -324,35 +377,6 @@
         </div>
       </div>
 
-      <!-- Avatar / Profile card -->
-      <div class="md:col-span-2" data-aos="fade-left" data-aos-delay="200">
-        <div class="relative w-56 mx-auto">
-
-          <!-- Back card (tilted, offset for depth effect) -->
-          <div class="absolute inset-0 rounded-2xl rotate-6 translate-x-3 translate-y-3"
-               style="background: rgba(30,60,120,0.5); border: 1px solid rgba(79,131,204,0.35);"></div>
-
-          <!-- Front card with gradient border -->
-          <div class="relative rounded-2xl p-0.5 hover:scale-[1.02] transition-transform duration-300"
-               style="background: linear-gradient(135deg, #4f83cc 0%, #64ffda 100%);">
-
-            <!-- Avatar content (replaced by app.js when photo is uploaded) -->
-            <div id="profile-avatar"
-                 class="rounded-2xl overflow-hidden bg-navy-l aspect-square
-                        flex flex-col items-center justify-center gap-3 px-6 text-center">
-              <div class="w-24 h-24 rounded-full bg-mint text-navy flex items-center justify-center
-                          text-4xl font-bold font-mono flex-shrink-0">NM</div>
-              <p id="profile-name" class="text-white font-semibold text-lg leading-snug"></p>
-              <p class="text-slate-l text-sm">Computer Network & Systems Engineer</p>
-              <p class="text-mint text-xs font-mono">Perth, WA 🇦🇺</p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Contact mini-list -->
-        <div class="mt-10 space-y-3" id="about-contact-list"></div>
-      </div>
     </div>
   </section>
 
