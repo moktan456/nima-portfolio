@@ -270,11 +270,18 @@ function renderEducation(education) {
 // LINKS (LinkedIn, etc. across the page)
 // ─────────────────────────────────────────────────────────────────────────────
 function renderLinks(p) {
-  if (!p.linkedin) return;
-  ['sidebar-linkedin', 'contact-linkedin', 'footer-linkedin'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.href = p.linkedin;
-  });
+  if (p.linkedin) {
+    ['sidebar-linkedin', 'contact-linkedin', 'footer-linkedin'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = p.linkedin;
+    });
+  }
+  if (p.github) {
+    ['sidebar-github', 'footer-github'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = p.github;
+    });
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
