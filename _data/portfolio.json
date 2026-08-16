@@ -55,7 +55,7 @@
   },
   "experience": [
     {
-      "title": "IT Support Officer",
+      "title": "IT Support Engineer",
       "company": "Australian Data & Cyber Institute",
       "period": "Mar 2026 – Present",
       "overview": "Provide end-to-end IT support and manage institutional systems, infrastructure, and student-facing platforms in a fast-paced education environment.",
@@ -136,6 +136,12 @@
       ]
     },
     {
+      "title": "IT Support Engineer/Founding Member of Edulink Digital",
+      "company": "Edulink Digital",
+      "period": "Jul 2023 - Current",
+      "overview": "Provide ICT solutions and provide expert Technological Consultation."
+    },
+    {
       "title": "ICT Teacher / Educational Technologist",
       "company": "Ministry of Education, Bhutan",
       "period": "Jan 2014 – Jun 2023",
@@ -150,12 +156,6 @@
         "Co-authored national ICT curriculum framework integrating cybersecurity",
         "Improved digital literacy and system usage across institutions"
       ]
-    },
-    {
-      "title": "IT Support Engineer/Founding Member of Edulink Digital",
-      "company": "Edulink Digital",
-      "period": "Jul 2023 - Current",
-      "overview": "Provide ICT solutions and provide expert Technological Consultation."
     }
   ],
   "education": [
